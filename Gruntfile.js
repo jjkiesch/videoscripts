@@ -359,7 +359,8 @@ module.exports = function (grunt) {
             '*.html',
             'views/{,*/}*.html',
             'images/{,*/}*.{webp}',
-            'fonts/*'
+            'fonts/*',
+            'data/*'
           ]
         }, {
           expand: true,
@@ -397,6 +398,19 @@ module.exports = function (grunt) {
         'imagemin',
         'svgmin'
       ]
+    },
+
+    buildcontrol: {
+      options: {
+        commit: true,
+        push: true
+      },
+      github: {
+        options: {
+          remote: 'git@github.com:jjkiesch/videoscripts.git',
+          branch: 'gh-pages'
+        }
+      }
     },
 
     // Test settings
