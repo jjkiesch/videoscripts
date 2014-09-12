@@ -23,6 +23,8 @@ angular
       .when '/about',
         templateUrl: 'views/about.html'
         controller: 'AboutCtrl'
+      .when '/scripts/:scriptId',
+        templateUrl: 'views/script.html'
+        controller: 'ScriptCtrl'
       .otherwise
         redirectTo: '/'
-
