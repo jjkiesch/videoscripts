@@ -1,14 +1,38 @@
 [
   {
-    "stepName": "step1",
-    "description": "This is the description for step 1",
-    "section": "{{val}} Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    "defaultVal": "[NAME]"
+    "stepName": "Critical Task",
+    "description": "What is the single important business task this product allows the customer to perform?",
+    "section": "This is how our company has been {{val}}. Scary huh?",
+    "defaultVal": "[CRITICAL TASK]"
   },
   {
-    "stepName": "step2",
-    "description": "description for step 2",
-    "section": "blah blah blah {{val}} blah blah blah",
-    "defaultVal": "[NAME]"
+    "stepName": "Problems",
+    "description": "What three short-term business problems may be a result from not using the product?",
+    "section": "So we have to {{val}}.",
+    "defaultVal": "[PROBLEM]"
+  },
+  {
+    "stepName": "Results",
+    "description": "What are three long-term negative results of not using the product?",
+    "section": "It's {{val}}.",
+    "defaultVal": "[RESULT]"
+  },
+  {
+    "stepName": "Title",
+    "description": "What decision maker titles within the target company are most likely to push for this solution?",
+    "section": "Our {{val}} say we need a better way, and they put me in charge of finding it.",
+    "defaultVal": "[TITLE]"
+  },
+  {
+    "stepName": "Product Name",
+    "description": "What is the name of the product being promoted in this video?",
+    "section": "Well I know just the solution: {{val}}. {{val}} is the most widely use property management system for a reason. They offer the most robust set of configurable tools that lets us handle all of our management needs.",
+    "defaultVal": "[PRODUCT NAME]"
+  },
+  {
+    "stepName": "Product Solution",
+    "description": "Is there another way to say the critical task from question 1?",
+    "section": "We're able to {{val}}.",
+    "defaultVal": "[PRODUCT SOLUTION]"
   }
 ]

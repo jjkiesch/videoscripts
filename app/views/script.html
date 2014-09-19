@@ -1,5 +1,20 @@
-<div ng-repeat="step in steps" class="well">
-  <p>{{step.stepName}}</p>
-  <p><label>Val: </label><input ng-model="step.defaultVal" placeholder="{{step.stepName}}" /></p>
-  <div step-section step="step" val="step.defaultVal"></div>
+<div ng-show="checkFinished()">
+  <div ng-repeat="step in steps" ng-show="checkCurrent($index)" class="row step-{{$index}}">
+    <div class="col-sm-8 well">
+      <p>{{step.description}}</p>
+      <p><label>{{step.stepName}}:</label> <input ng-model="step.defaultVal" placeholder="{{step.stepName}}" /></p>
+      <button class="btn btn-primary" ng-show="hasPrev($index)" ng-click="stepPrev($index)">&laquo; Previous</button>
+      <button class="btn btn-primary" ng-show="hasNext($index)" ng-click="stepNext($index)">Next &raquo;</button>
+      <button class="btn btn-primary" ng-show="$last" ng-click="finishScript($index)">Finish Script</button>
+    </div>
+    <div class="col-sm-4">
+      <div class="template" step-section step="step" val="step.defaultVal"></div>
+    </div>
+  </div>
+</div>
+<div class="row" ng-show="!checkFinished()">
+  <div class="col-sm-6">
+    <h3>All done! Here is your script:</h3>
+    <textarea class="form-control" rows="15" ng-bind="fullScript"></textarea>
+  </div>
 </div>
